@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - BaseArticleCell
 class BaseArticleCell: UITableViewCell {
     
     @IBOutlet weak var articleImg:UIImageView!
@@ -18,6 +19,7 @@ class BaseArticleCell: UITableViewCell {
         }
     }
     
+    /// fill cell data 
     func updateCellData() {
         GCD.onMain { [weak self] in
             guard let self = self, let vm = self.articleVM else { return }

@@ -20,6 +20,8 @@ class NewsVM {
     private var router:Router?
     
     func loadNewsData() {
+        
+        // check for placeholder data in DB
         if let localData = DBManager.shared.fetchData() {
             prepareDataSource(articles: Array(localData.articles))
             getNews(showIndicator: false)
@@ -28,8 +30,10 @@ class NewsVM {
         }
     }
     
-    /// search for photos by inout keyword
-    /// - Parameter text: `String`
+    /// load news for particular section and period
+    /// - Parameter showIndicator: `Bool`
+    /// - Parameter section: `String`
+    /// - Parameter period: `Int`
     func getNews(showIndicator:Bool = true, section:String = "all-sections", period:Int = 7 ) {
         showIndicator ? showLoading?() : nil
         if router == nil {
@@ -50,8 +54,8 @@ class NewsVM {
         }
     }
     
-    /// handle data in viewmodel
-    /// - Parameter photos: `Photo` Model
+    /// handle data in viewmodels
+    /// - Parameter articles: `[Article]`
     func prepareDataSource(articles: [Article]) {
         articlesCellVMs = articles.map{ArticleVM(article: $0)}
         bindingDelegate?.reloadData()

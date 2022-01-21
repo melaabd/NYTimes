@@ -9,6 +9,7 @@ import UIKit
 
 protocol RequestImages {}
 
+// MARK: - ImgProvider to manage loading image from backend and save it in cache memory
 final class ImgProvider: RequestImages {
     
     static var shared = ImgProvider()

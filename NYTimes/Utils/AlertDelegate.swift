@@ -7,12 +7,14 @@
 
 import UIKit
 
+/// AlertDelegate
 protocol AlertDelegate {
     typealias Events = (_ retry: Bool)-> Void
     
     func showAlertWithError(_ message: String, completionHandler: @escaping Events)
 }
 
+// MARK: - Implement AlertDelegate with UIViewController
 extension AlertDelegate where Self: UIViewController{
     
     //MARK:- Show Error Alert

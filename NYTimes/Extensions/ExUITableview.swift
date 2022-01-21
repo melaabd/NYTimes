@@ -9,7 +9,7 @@
 import UIKit
 extension UITableView {
     
-    /// add placeholder view to show that table view doesn't have items
+    /// add placeholder view to show that table view doesn't have data
     /// - Parameter title: no items message `String`
     func setEmptyView(_ title: String? = nil) {
         guard let placeHolderTxt = title else {

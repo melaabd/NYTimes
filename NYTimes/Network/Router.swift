@@ -34,10 +34,9 @@ class Router: RequestNews {
 
 extension Router {
     
-    /// get photos task
-    /// - Parameters:
-    ///   - keyword: `String` search keyword
-    ///   - page: `Int` next page
+    /// get news task
+    ///   - section: `String`
+    ///   - period: `Int`
     ///   - completionHandler: `PhotosAPICompletion`
     func getNews(section: String, period: Int, completionHandler: NewsAPICompletion) {
         let session = URLSession.shared

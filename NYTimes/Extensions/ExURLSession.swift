@@ -61,7 +61,7 @@ extension RequestNews where Self: URLSession {
     /// load news data task
     /// - Parameters:
     ///   - url: URL
-    ///   - completionHandler: (Photos?, errorMessage?)
+    ///   - completionHandler: (News?, errorMessage?)
     /// - Returns: URLSessionDataTask
     func newsTask(with url: URL, completionHandler: @escaping (News?, String?) -> Void) -> URLSessionDataTask {
         return self.codableTask(with: url, completionHandler: completionHandler)

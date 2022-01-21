@@ -8,6 +8,7 @@
 import Foundation
 import RealmSwift
 
+// MARK: - DBManager to manage local database
 class DBManager: NSObject {
     private let myRealmQueue = DispatchQueue(label: "realmQueue", qos: .background)
     var database:Realm!
@@ -38,6 +39,8 @@ class DBManager: NSObject {
         
     }
     
+    /// fetch data from locala DB
+    /// - Returns: `News`
     func fetchData() -> News? {
         if let results =  self.database.objects(News.self).first {
             return results
@@ -45,7 +48,9 @@ class DBManager: NSObject {
             return nil
         }
     }
-
+    
+    /// set new data in DB
+    /// - Parameter news: `News`
     func replaceData(news: News) {
         GCD.onMain { [weak self] in
         try! self?.database.write {

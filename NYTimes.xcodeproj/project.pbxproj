@@ -135,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				0F71E022279AE73D00012F01 /* DBManager.swift */,
+				969699AC27999390006CA203 /* ImgProvider.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -164,10 +165,10 @@
 		969699662799782B006CA203 /* NYTimes */ = {
 			isa = PBXGroup;
 			children = (
-				0F71E021279AE72700012F01 /* Managers */,
 				9696999727998C6A006CA203 /* App */,
 				9696999E27998D6E006CA203 /* Utils */,
 				9696999F27998D74006CA203 /* Extensions */,
+				0F71E021279AE72700012F01 /* Managers */,
 				9696999A27998D06006CA203 /* View */,
 				9696999D27998D60006CA203 /* ViewModel */,
 				9696999C27998D55006CA203 /* Model */,
@@ -288,7 +289,6 @@
 			children = (
 				969699A82799934D006CA203 /* EndPoint.swift */,
 				969699AA27999368006CA203 /* Router.swift */,
-				969699AC27999390006CA203 /* ImgProvider.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";

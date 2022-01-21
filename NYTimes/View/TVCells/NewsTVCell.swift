@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - NewsTVCell
 class NewsTVCell: BaseArticleCell {
     
     @IBOutlet weak var byLineLabel:UILabel!
@@ -16,6 +17,7 @@ class NewsTVCell: BaseArticleCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
+        /// change the shape of iamge 
         articleImg.layer.cornerRadius = articleImg.frame.height / 2
     }
     
