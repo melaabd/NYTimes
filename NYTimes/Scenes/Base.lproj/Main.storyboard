@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--NewsVC-->
+        <!--NY Times Most Popular-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="NewsVC" id="BYZ-38-t0r" customClass="NewsVC" customModule="NYTimes" customModuleProvider="target" sceneMemberID="viewController">
@@ -196,7 +196,9 @@
                             <constraint firstAttribute="bottom" secondItem="t0X-dW-Uz1" secondAttribute="bottom" id="dmd-WD-dyP"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="yVO-K2-xwL"/>
+                    <navigationItem key="navigationItem" title="NY Times Most Popular" id="yVO-K2-xwL">
+                        <barButtonItem key="backBarButtonItem" title=" " id="UGJ-3s-Fd4"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="newsTableview" destination="t0X-dW-Uz1" id="MSM-z4-lAN"/>
                         <segue destination="jHo-mr-EUZ" kind="show" identifier="showArticleDetail" id="gHc-oe-P3g"/>
@@ -319,7 +321,14 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.27450980392156865" green="0.88235294117647056" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" systemColor="systemGroupedBackgroundColor"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.27450980390000002" green="0.88235294119999996" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -345,9 +354,6 @@
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGroupedBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

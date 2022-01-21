@@ -25,7 +25,6 @@ class NewsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "NY Times Most Popular"
         newsVM = NewsVM()
         newsVM?.bindingDelegate = self
         viewModelCompletions()
@@ -117,7 +116,11 @@ extension NewsVC: BindingVVMDelegate, AlertDelegate {
     /// reload data delegate
     func reloadData() {
         GCD.onMain { [weak self] in
-            self?.newsTableview.reloadData()
+            guard let self = self else { return }
+            UIView.transition(with: self.newsTableview,
+                              duration: 0.5,
+                              options: .transitionCrossDissolve,
+                              animations: { self.newsTableview.reloadData() })
         }
     }
     
