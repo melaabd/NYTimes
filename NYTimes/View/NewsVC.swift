@@ -29,7 +29,7 @@ class NewsVC: UIViewController {
         newsVM = NewsVM()
         newsVM?.bindingDelegate = self
         viewModelCompletions()
-        newsVM?.getNews()
+        newsVM?.loadNewsData()
     }
 
     override func didReceiveMemoryWarning() {

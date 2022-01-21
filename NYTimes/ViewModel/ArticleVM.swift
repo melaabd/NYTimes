@@ -22,7 +22,7 @@ struct ArticleVM {
         byline = article.byline ?? ""
         publishedDate = article.publishedDate ?? ""
         abstract = article.abstract ?? ""
-        let mediaMetaData = article.media?.first?.mediaMetadata
+        let mediaMetaData = article.media.first?.mediaMetadata
         thumbnailUrlString = mediaMetaData?.filter {$0.format == "Standard Thumbnail"}.first?.url
         imageUrlString = mediaMetaData?.filter{$0.format == "mediumThreeByTwo440"}.first?.url
     }
